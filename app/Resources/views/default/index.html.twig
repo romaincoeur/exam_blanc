@@ -1,0 +1,42 @@
+{% extends 'default/layout.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row>">
+            <h1>Examen Blanc</h1>
+            <p>L'examen blanc technique se découpe en trois étapes, tu peux réaliser les trois étapes distinctement les unes des autres, elles ne sont pas liées.</p>
+            <p>Je te conseille de prendre une heure par étape, les trois sont toutes aussi importantes les unes que les autres</p>
+            <p>Même si tu ne parviens pas à réaliser la totalité de l'étape, laisse le code, il manque parfois peu de chose pour que se soit fonctionnel.</p>
+            <div class="row attention">
+                <div class="col m2">
+                    <img src="https://pixabay.com/static/uploads/photo/2013/07/12/13/22/warning-146916_960_720.png" alt="attention"/>
+                </div>
+                <div class="col m8">
+                    <p>Avant toute chose, cré toi une branch sur git portant ton nom, c'est sur cette dernière que tu travaillera, une fois le travail effectuer tu poussera ton travail dessus</p>
+                </div>
+                <div class="col m2">
+                    <img src="https://pixabay.com/static/uploads/photo/2013/07/12/13/22/warning-146916_960_720.png" alt="attention"/>
+                </div>
+            </div>
+        </div>
+        <div class="row etapes">
+            <div class="col m4">
+                <h4>Algorithmique</h4>
+                <p>L'objectif ici est de réaliser un algorythme permettant de trier des éléments</p>
+                <div><a class="waves-effect waves-light btn" href="{{ path('exam_algo') }}">C'est parti</a></div>
+            </div>
+            <div class="col m4">
+                <h4>Intégration</h4>
+                <p>Pour ce qui est de l'intégration, tu devra mettre en forme une page web en utilisant la méhode de ton choix, framework (Bootstrap, Materialize, ou autre), ou pure CSS.</p>
+                <div><a class="waves-effect waves-light btn" href="{{ path('exam_integration') }}">C'est parti</a></div>
+            </div>
+            <div class="col m4">
+                <h4>Symfony & MVC</h4>
+                <p>Dans cette étape, tu devra réaliser un mini fil d'actu le tout sur une seul page (formulaire, et affichage des données)</p>
+                <div><a class="waves-effect waves-light btn">C'est parti</a></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

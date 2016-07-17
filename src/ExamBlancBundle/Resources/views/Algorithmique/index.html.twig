@@ -1,0 +1,68 @@
+{% extends 'default/layout.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row>">
+            <h1>Algorithmique</h1>
+            <p>Bienvenue sur le test d'algorithmique</p>
+            <p>Ci dessous une liste de nombre affiché dans le désordre.</p>
+            <p>L'objectif est de trier les nombres du plus petit au plus grand (le plus petit en haut :-))</p>
+            <p>Ouvre le projet avec PHP Storm et rend toi dans le controlleur "AlgoController", c'est ici que tu devra travailler.</p>
+            <p>Tu n'a normalement rien à modifier dans les autres fichiers pour cette étapes</p>
+            <p>Bon courage</p>
+            <div class="row attention">
+                <div class="col m2">
+                    <img src="https://pixabay.com/static/uploads/photo/2013/07/12/13/22/warning-146916_960_720.png" alt="attention"/>
+                </div>
+                <div class="col m8">
+                    <p>Tu n'as pas le droit d'utiliser de fonction de référence du type "sort"</p>
+                    <p><a href="http://php.net/manual/fr/function.sort.php" target="_blank">PHP Manual</a></p>
+                    <p>:-)</p>
+                </div>
+                <div class="col m2">
+                    <img src="https://pixabay.com/static/uploads/photo/2013/07/12/13/22/warning-146916_960_720.png" alt="attention"/>
+                </div>
+            </div>
+        </div>
+        <div class="row algo_tab">
+            <div class="col m2 offset-m4">
+                <table>
+                    <thead>
+                        <tr>
+                            <th data-field="name">Tableau Non trié</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for int in tab_sans_tri %}
+                        <tr>
+                            <td>{{ int }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col m2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th data-field="name">Tableau Trié</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for int in tab_avec_tri %}
+                        <tr>
+                            <td>{{ int }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="button_homepage">
+                <a href="{{ path('exam_blanc_homepage') }}" class="waves-effect waves-light btn">Retour à la page d'accueil</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

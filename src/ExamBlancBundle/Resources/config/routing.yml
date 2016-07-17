@@ -1,0 +1,15 @@
+exam_blanc_homepage:
+    path:     /
+    defaults: { _controller: ExamBlancBundle:Default:index }
+
+exam_algo:
+    path: algo
+    defaults: { _controller: ExamBlancBundle:Algo:index }
+
+exam_integration:
+    path: integration
+    defaults: { _controller: ExamBlancBundle:Integration:index }
+
+exam_integration_exam:
+    path: integration/exam
+    defaults: { _controller: ExamBlancBundle:Integration:exam }

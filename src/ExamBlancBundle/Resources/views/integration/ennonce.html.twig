@@ -1,0 +1,42 @@
+{% extends 'default/layout.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row ennonce">
+        <h1>Intégration</h1>
+        <p>Bienvenue sur le test d'intégration</p>
+        <p>Ci dessous deux Wireframe, une vue web, et une vue mobile.</p>
+        <p>L'objectif est d'intégrer ces deux wireframe.</p>
+        <p>Tu peux utiliser l'outil de ton choix, avec FrameWork ou sans, as you want</p>
+        <p>La seul règle est d'obtenir un rendu équivalent à celui sur les wireframe, et également d'avoir une page responsive, d'ou les deux vue.</p>
+        <p>Les images dont tu as besoin se trouvent dans le dossier public/images du bundle.</p>
+        <p>La page que tu va créer sera visible avec le path /integration/exam (ex: http://localhost/exam_blanc/web/app_dev.php/integration/exam) ou en cliquant sur le lien situé en bas de page.</p>
+        <p>Ouvre le projet avec PHP Storm et rend toi dans le dossier ressource.</p>
+        <p>A l'intérieur du dossier public/css, tu as une feuille de style "style_test_integration.css", c'est ici que tu devra mettre ton style.</p>
+        <p>A l'intérieur du dossier views/integration, tu as un fichier "index.html.twig", c'est ici qu'il faudra mettre ton html.</p>
+        <p>Si tu dois faire appel à des librairies externes, fait les également dans ce fichier.</p>
+        <p>Tu n'a normalement rien à modifier dans les autres fichiers pour cette étapes</p>
+        <p>Bon courage</p>
+    </div>
+    <div class="row wireframe">
+        <div class="col m6">
+            <h4>Vue web</h4>
+            <img style="width: 100%" src="http://80.67.190.141/vue_web.png">
+        </div>
+        <div class="col m6">
+            <h4>Vue mobile</h4>
+            <img style="width: 100%" src="http://80.67.190.141/vue_mobile.png">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m6 button_homepage">
+            <a href="{{ path('exam_integration_exam') }}" class="waves-effect waves-light btn">Accéder à ma page</a>
+        </div>
+        <div class="col m6 button_homepage">
+            <a href="{{ path('exam_blanc_homepage') }}" class="waves-effect waves-light btn">Retour à la page d'accueil</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

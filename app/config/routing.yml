@@ -1,0 +1,3 @@
+exam_blanc:
+    resource: "@ExamBlancBundle/Resources/config/routing.yml"
+    prefix:   /
