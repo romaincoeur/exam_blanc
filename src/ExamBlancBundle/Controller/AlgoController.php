@@ -18,10 +18,10 @@ class AlgoController extends Controller
         ));
     }
 
-    // Complete la fonction se nommant "tri_tab" permettant de trié le tableau "tab_sans_tri" dans l'ordre croissant
-    // A au fait, fonction de référence autorisé ==> AUCUNE :-)
+    // Complète la fonction se nommant "tri_tab" permettant de trier le tableau "tab_sans_tri" dans l'ordre croissant
+    // Ah au fait, fonction de référence autorisée ==> AUCUNE :-)
 
-    private function tri_tab()
+    private function tri_tab($raw_tab)
     {
 
     }
