@@ -21,9 +21,26 @@ class AlgoController extends Controller
     // Complète la fonction se nommant "tri_tab" permettant de trier le tableau "tab_sans_tri" dans l'ordre croissant
     // Ah au fait, fonction de référence autorisée ==> AUCUNE :-)
 
-    private function tri_tab($raw_tab)
+    private function tri_tab($raw_tab, $sorted_tab=[])
     {
-
+        if ($raw_tab==[]) return $sorted_tab;
+        elseif ($sorted_tab==[]){
+            $el = array_pop($raw_tab);
+            return $this->tri_tab($raw_tab, [$el]);
+        }
+        else {
+            $el = array_pop($raw_tab);
+            $i = 0;
+            while ($el > $sorted_tab[$i]){
+                $i++;
+                if ($i==count($sorted_tab)){
+                    $sorted_tab[] = $el;
+                    return $this->tri_tab($raw_tab, $sorted_tab);
+                }
+            }
+            array_splice($sorted_tab, $i, 0, $el);
+            return $this->tri_tab($raw_tab, $sorted_tab);
+        }
     }
 
     // Fin
